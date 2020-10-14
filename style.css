@@ -1,0 +1,241 @@
+/* style.css */
+*{ 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {list-style-type: none;}
+a {
+  text-decoration: none;
+  color: black;
+}
+body { position: relative;}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+header {
+  width: 100%; height: 80px;
+  position: relative;
+  /* background: #ccc; */
+  /* outline: 1px solid red; */
+}
+
+header > #logo {
+  margin-left: 50px;
+  float: left;
+  /* outline: 1px solid red; */
+}
+
+header > #logo img {
+  width: 240px;
+  margin: 10px 0;
+}
+
+header > .depth1 { 
+  position: absolute;
+  width: 60%;
+  right: 50px;
+  /* outline: 1px solid red; */
+  z-index: 1;
+}
+
+header > .depth1 > li {
+  float: left;
+  width: 16.6%;
+  font-size: 0.9vw;
+  /* margin-left: 30px; */
+  /* line-height: 80px; */
+}
+
+header > .depth1 > li > a {
+  line-height: 80px;
+  display: block;
+  text-align: center;
+  /* background: skyblue; */
+}
+
+/* header > .depth1 > li:nth-child(5) > a {
+  line-height: 40px;
+} */
+
+header > .depth1 > li:hover > a {
+  color: #dd9f52;
+  text-shadow: 1px 0 0 currentcolor;
+}
+
+header > .depth1 > li .depth2 {
+  display: none;
+  /* background: rgb(56, 56, 56); */
+  background: #dd9f52;
+  padding: 10px;
+  font-size: 0.7vw;
+  line-height: 200%;
+}
+
+header > .depth1 > li .depth2 a {
+  color: white;
+}
+
+header > .depth1 > li .depth2 a:hover {
+  /* color: #dd9f52; */
+  color: #704107;
+  /* border-bottom: 1px solid currentColor; */
+  text-shadow: 1px 0 0 currentcolor;
+}
+
+#wrap {
+  height: 100% !important;
+}
+
+#banner {
+  background-image: url(./images/2020_halloween_bg.jpg);
+  height: 646px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#banner > #visual {
+  position: relative;
+  max-width: 1100px;
+  height: 100%;
+  margin: 0 auto;  
+  /* outline: 1px solid red; */
+}
+
+#banner > #visual img {
+  width: 100%;
+}
+
+#banner > #visual > .ab {
+  position: absolute;
+}
+
+#banner > #visual > .ab :before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  max-height: 98px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#banner > #visual > #emblem {
+  top: 10%;
+  opacity: 0;
+  animation-name: holloween;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+#banner > #visual > #obj1 {
+  bottom: 16.5%;
+  left: 23%;
+  width: 38%;
+  max-width: 423px;
+  opacity: 0;
+  animation-name: holloween1;
+  animation-duration: 9s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+}
+
+#banner > #visual > #obj1 ::before {
+  background-image: url(./images/2020_halloween_pumpkin_tit_1.png);
+  top: 93%;
+  left: 43%;
+  width: 30%;
+  max-width: 123px;
+}
+
+#banner > #visual > #obj2 {
+  bottom: 19%;
+  left: 59%;
+  width: 25%;
+  max-width: 272px;
+  opacity: 0;
+  animation-name: holloween1;
+  animation-duration: 9s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+}
+
+#banner > #visual > #obj2 ::before {
+  background-image: url(./images/2020_halloween_frappuccino_tit_1.png);
+  /* outline: 1px solid red; */
+  top: 98%;
+  left: -4.5%;
+  width: 77%;
+  max-width: 208px;
+}
+
+#banner > #visual > #obj3 {
+  bottom: 20%;
+  /* right: -4%; */
+  left: 78.5%;
+  width: 26%;
+  max-width: 285px;
+  opacity: 0;
+  animation-name: holloween1;
+  animation-duration: 9s;
+  animation-delay: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+#banner > #visual > #obj3 ::before {
+  background-image: url(./images/2020_halloween_latte_tit_1.png);
+  /* outline: 1px solid red; */
+  top: 99.5%;
+  left: 10%;
+  width: 47%;
+  max-width: 134px;
+}
+
+#banner > #visual > #detail {
+  width: 125px;
+  height: 38px;
+  line-height: 34px;
+  text-align: center;
+  /* background: white; */
+  font-size: 15px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+  bottom: 45%;
+  left: 11.5%;
+  opacity: 0;
+  animation-name: holloween1;
+  animation-duration: 9s;
+  animation-delay: 1.8s;
+  animation-iteration-count: infinite;
+}
+
+#banner > #visual > #detail a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  transition: 0.5s;
+  font-weight: 700;
+}
+
+#banner > #visual > #detail a:hover {
+  color: #000;
+  background-color: #dd9f52;
+}
+
+
+@keyframes holloween {
+  0% { opacity: 0;}
+  30% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0;}
+}
+
+@keyframes holloween1 {
+  0% { opacity: 0;}
+  20% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0;}
+}
